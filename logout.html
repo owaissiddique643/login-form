@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logout <form action=""></form></title>
+</head>
+<style>
+    Body {  
+    font-family: Calibri, Helvetica, sans-serif;  
+    color: cornsilk;
+    background-image: url(./img/im4.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+  .navbar
+{
+    text-align: center;
+padding: 10px;
+}
+.navbar a {
+    text-decoration: none;
+color: rgba(248, 249, 255, 0.911);
+font-size: 20px;
+font-family:  sans-serif;
+margin: 40px;
+border: 2px solid transparent;
+padding: 5px;
+transition: 0.5s;
+
+}
+
+
+.navbar
+{
+    box-sizing: border-box;
+    background: linear-gradient(to left, #8dc7ee, #035bff,  #42a8ec);
+      height: 50px;
+    
+}
+
+
+.navbar a:hover
+{
+    background: rgb(0, 0, 0);
+    
+    border-radius: 30%;  }
+
+h1{text-align: center;
+    font-size: 40px;
+
+
+}
+#one{
+    font-size: 24px;
+    color: aqua;
+    text-align: center;
+  
+}
+
+#two{
+    font-size: 24px;
+    color: rgb(0, 238, 255);
+    text-align: center;
+    animation: animate 2s linear infinite;
+}
+#three{
+    font-size: 24px;
+    color: rgb(0, 238, 255);
+    text-align: center;
+    animation: animate 2s linear infinite;
+}
+
+</style>
+<body>
+    
+   
+
+    <div class="navbar">
+        
+        <a href="index.html">Signup</a>
+    </div>
+    <h1>DETAIL OF USER </h1>
+
+    <p id="one"></p>
+    <p id="two"></p>
+    <p id="three"></p>
+    <p id="four"></p> 
+    <p id="five"></p> 
+
+
+
+</body>
+<script>
+   
+    var currentuser = JSON.parse(localStorage.getItem("currentuser"))
+   
+    console.log(currentuser)
+    document.getElementById("one").innerHTML = currentuser.name;
+    document.getElementById("two").innerHTML = currentuser.cnic;
+    document.getElementById("three").innerHTML =currentuser.gender;
+   
+
+    
+</script>
+</html>
